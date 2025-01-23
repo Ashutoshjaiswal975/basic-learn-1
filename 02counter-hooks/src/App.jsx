@@ -10,14 +10,19 @@ function App() {
 
   // Function to increase the counter value
   const addValue = () => {
-    console.log("value added", count); // Log current value before updating
+    if(count<20){
     setCount(count + 1); // Update the state by adding 1
+    console.log("value added", count); // Log current value before updating
+    }
+   
   };
 
   // Function to decrease the counter value
   function removeValue() {
+    if(count>0){
     setCount(count - 1); // Update the state by subtracting 1
     console.log("value subtract", count); // Log current value before updating
+    }
   }
 
   return (
