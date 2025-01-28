@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
+import UserContext from "./UserContext";
 
-const UserContext = createContext(); // Correctly defining context
 
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(null); // Fixed hook usage
@@ -12,5 +12,5 @@ const UserContextProvider = ({ children }) => {
   );
 };
 
-export { UserContext, UserContextProvider }; // Correctly exporting
+export default UserContextProvider
 
